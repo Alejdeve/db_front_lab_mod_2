@@ -1,3 +1,14 @@
+:root {
+    --Azul: #3d81db;
+    --Amarillo: #f8ce4d;
+    --Verde: #4d9f54;
+    --Rojo: #dd2a55;
+    --Naranja: #f77b28;
+    --Morado: #b07acc;
+    --Blanco: #F2F4FC;
+    --Blanco2: #ECF7FF;
+}
+
 *,html,body {
     margin: 0;
     padding: 0;
@@ -8,10 +19,75 @@
 body {
     width: 100vw;
     overflow-x: hidden;
-    background-color: var(--Claro-1);
+    background-color: var(--Amarillo);
 }
 
 header {
     width: 100vw;
     margin-bottom: 50px;
 }
+
+img {
+    width: 400px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form h1 {
+    margin-bottom: 20px;
+    font-size: 48px;
+    color: #F67280;
+}
+
+.form img {
+    margin-bottom: 20px;
+}
+
+.form-example {
+    padding: 10px;    
+}
+
+.color-change {
+    color: #F67280; 
+    transition: color 0.3s ease;
+}
+
+h1 {
+    font-family: 'Dinoko';    
+}
+  
+.color-change:hover {
+    color: #355C7D;
+}
+
+input[type="submit"] {
+    font-size: 16px; /* Tamaño de la fuente */
+    padding: 9px 18px; /* Espaciado interno del botón */
+    justify-content: center;
+}
+
+.fname {
+    text-align: left;
+    justify-content: left;   
+}
+
+.button-form {
+    display: flex; /* Utiliza Flexbox para facilitar el centrado */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    margin-top: 10px;
+}
+
+input[type="text"] {
+    padding: 6px 50px 6px 50px;
+}
+
+input[type="email"] {
+    padding: 6px 50px 6px 50px;
+}
+
+
