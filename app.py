@@ -6,22 +6,20 @@ app = Flask(__name__)
 # Configuración de la conexión a la base de datos
 db = mysql.connector.connect(
     host="localhost",
-    user="tu_usuario",
-    password="tu_contraseña",
-    database="BabyStore"  # Cambia esto si usas otro nombre de base de datos
+    user="root",            
+    password="Dontetto182",            
+    database="babyStore"   
 )
 
-@app.route('/subscribe', methods=['POST'])
-def subscribe():
-    name = request.form['fname']
-    email = request.form['email']
+@app.route('/')
+def index():
+    cursor = db.cursor(dictionary=True)
+    cursor.execute("SELECT * FROM Customers")
+    customers = cursor.fetchall()
+    return render_template('form.html', customers=customers)
 
-    cursor = db.cursor()
-    cursor.execute("INSERT INTO Customers (FirstName, Email, PurchaseReason) VALUES (%s, %s, 'otro')", (name, email))
-    db.commit()
-    cursor.close()
-
-    return "Thank you for subscribing!"
+# Aquí puedes agregar más rutas según sea necesario
 
 if __name__ == '__main__':
     app.run(debug=True)
+

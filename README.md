@@ -54,3 +54,11 @@ Creación de consultas simples y complejas.<br>
 Triggers para mantener integridad y consistencia de datos.<br>
 Uso de transacciones para operaciones críticas.<br>
 Definición de funciones personalizadas.<br>
+
+### HTML
+
+Creamos 3 archivos html:
+- HTML Landing page donde aparece la oferta a cambio de un tip coo padre al aceptar este trato y dar click lo envia a
+- HTML de formulario en donde solo debe dejar su nombre completo y mail, el cual almacena en la base de datos y envia a:
+- HTML donde puede registrar su tip y lo dirigr a la pagina de corte ingles o donde el usuario elija.
+
